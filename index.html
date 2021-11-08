@@ -40,12 +40,23 @@
                 webkit-playsinline autoplay muted playsinline></video>
         </a-assets>
 
-        <a-marker type="pattern" preset="custom" url="assets2/marker.patt" videohandler smooth="true" smoothCount="10"
+        <!-- <a-marker type="pattern" preset="custom" url="assets2/marker.patt" videohandler smooth="true" smoothCount="10"
             smoothTolerance="0.01" smoothThreshold="5" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
-            <a-video src="#vid" scale="1 1 1" position="0 0.1 0" rotation="-90 0 0">
-            </a-video>
-        </a-marker>
-
+          
+        </a-marker> -->
+        
+        <a-nft
+        type="nft"
+        url="<path-to-your-image-descriptors>"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5"
+      >
+          <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
+          <a-video src="#vid" scale="1 1 1" position="0 0.1 0" rotation="-90 0 0">
+        </a-video>
+      </a-nft>
         <a-entity camera></a-entity>
     </a-scene>
 </body>
